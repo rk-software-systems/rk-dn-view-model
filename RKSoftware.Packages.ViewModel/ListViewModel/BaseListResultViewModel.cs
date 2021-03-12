@@ -37,7 +37,9 @@ namespace RKSoftware.Packages.ViewModel
         /// Next page
         /// </summary>
         public string Next { get; set; }
-        
+
+        public bool SetNext(bool flag) => next = flag;
+
         /// <summary>
         /// Set Reference to link
         /// </summary>
