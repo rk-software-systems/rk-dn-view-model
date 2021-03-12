@@ -37,7 +37,9 @@ namespace RKSoftware.Packages.ViewModel
         /// Next page
         /// </summary>
         public string Next { get; set; }
-        
+
+        public bool SetNext(bool flag) => next = flag;
+
         /// <summary>
         /// Set Reference to link
         /// </summary>
@@ -60,28 +62,17 @@ namespace RKSoftware.Packages.ViewModel
             {
                 if (!queryString.Contains("PageNumber", StringComparison.Ordinal))
                 {
-                    queryString = "?PageNumber=1&" + queryString;
+                    queryString += "&PageNumber=1";
                 }
 
                 if (!queryString.Contains("PageSize", StringComparison.Ordinal))
                 {
-                    var i = queryString.IndexOf('&');
-
-                    if (i != -1)
-                    {
-                        queryString = queryString.Insert(i + 1, "PageSize=10&");
-                    }
-
-                    i = queryString.IndexOf('&', i + 1);
-
-                    if (i != -1 && queryString.Length == i)
-                    {
-                        queryString.Remove(i);
-                    }
+                    queryString += "&PageSize=10";
                 }
             }
 
             var link = path + queryString;
+            prev = PageNumber != 1;
 
             if (next)
             {
@@ -96,4 +87,5 @@ namespace RKSoftware.Packages.ViewModel
             }
         }
     }
+    
 }
