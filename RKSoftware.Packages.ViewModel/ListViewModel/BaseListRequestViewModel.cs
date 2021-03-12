@@ -1,4 +1,4 @@
-﻿namespace DigiCare.UserService.ViewModel.Paging
+﻿namespace RKSoftware.Packages.ViewModel
 {
     /// <summary>
     /// This view model is used as a base model for List requests

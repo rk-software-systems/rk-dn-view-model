@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>RKSoftware.Packages.ViewModel</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>RK Software Systems</Company>
+    <Product>Base view models.</Product>
+    <Description>This package contains base View model classes as well as extension methods that can be used across web projects</Description>
+    <PackageProjectUrl>https://github.com/rk-software-systems/rk-dn-view-model</PackageProjectUrl>
+    <PackageIcon>company-logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/rk-software-systems/rk-dn-view-model</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>RKSoftware, Web, View Model</PackageTags>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\company-logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

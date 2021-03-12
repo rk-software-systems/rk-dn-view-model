@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace DigiCare.UserService.ViewModel.Paging.Extensions
+namespace RKSoftware.Packages.ViewModel.Extensions
 {
     /// <summary>
     /// Queriable Extensions

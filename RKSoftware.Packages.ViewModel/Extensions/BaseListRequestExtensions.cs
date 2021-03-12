@@ -1,8 +1,7 @@
-﻿using DigiCare.UserService.ViewModel.Paging.Extensions;
-using System;
+﻿using System;
 using System.Linq;
 
-namespace DigiCare.UserService.ViewModel.Paging
+namespace RKSoftware.Packages.ViewModel.Extensions
 {
     /// <summary>
     /// This class contains Base List request common Extension methods

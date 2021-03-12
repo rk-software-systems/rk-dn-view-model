@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DigiCare.UserService.ViewModel.Paging
+namespace RKSoftware.Packages.ViewModel
 {
     /// <summary>
     /// This view model is used as a base list result view model
@@ -10,6 +10,9 @@ namespace DigiCare.UserService.ViewModel.Paging
     public class BaseListResultViewModel<T>
         where T : class
     {
+        private bool prev;
+        private bool next;
+
         /// <summary>
         /// List item data
         /// </summary>
@@ -34,11 +37,6 @@ namespace DigiCare.UserService.ViewModel.Paging
         /// Next page
         /// </summary>
         public string Next { get; set; }
-
-#pragma warning disable 649
-        private bool prev;
-        private bool next;
-#pragma warning restore 649     
         
         /// <summary>
         /// Set Reference to link
