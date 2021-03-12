@@ -62,24 +62,12 @@ namespace RKSoftware.Packages.ViewModel
             {
                 if (!queryString.Contains("PageNumber", StringComparison.Ordinal))
                 {
-                    queryString = "?PageNumber=1&" + queryString;
+                    queryString += "&PageNumber=1";
                 }
 
                 if (!queryString.Contains("PageSize", StringComparison.Ordinal))
                 {
-                    var i = queryString.IndexOf('&');
-
-                    if (i != -1)
-                    {
-                        queryString = queryString.Insert(i + 1, "PageSize=10&");
-                    }
-
-                    i = queryString.IndexOf('&', i + 1);
-
-                    if (i != -1 && queryString.Length == i)
-                    {
-                        queryString.Remove(i);
-                    }
+                    queryString += "&PageSize=10";
                 }
             }
 
@@ -99,4 +87,5 @@ namespace RKSoftware.Packages.ViewModel
             }
         }
     }
+    
 }
