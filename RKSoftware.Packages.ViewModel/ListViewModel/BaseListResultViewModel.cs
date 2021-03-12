@@ -84,6 +84,7 @@ namespace RKSoftware.Packages.ViewModel
             }
 
             var link = path + queryString;
+            prev = PageNumber != 1;
 
             if (next)
             {
