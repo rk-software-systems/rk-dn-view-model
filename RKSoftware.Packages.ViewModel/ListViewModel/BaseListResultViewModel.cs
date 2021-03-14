@@ -10,7 +10,6 @@ namespace RKSoftware.Packages.ViewModel
     public class BaseListResultViewModel<T>
         where T : class
     {
-        private bool prev;
         private bool next;
 
         /// <summary>
@@ -72,7 +71,6 @@ namespace RKSoftware.Packages.ViewModel
             }
 
             var link = path + queryString;
-            prev = PageNumber != 1;
 
             if (next)
             {
@@ -80,7 +78,7 @@ namespace RKSoftware.Packages.ViewModel
                     $"{nameof(requestModel.PageNumber)}={PageNumber + 1}");
             }
 
-            if (prev)
+            if (PageNumber != 1)
             {
                 Prev = link.Replace($"{nameof(requestModel.PageNumber)}={PageNumber}",
                     $"{nameof(requestModel.PageNumber)}={PageNumber - 1}");
