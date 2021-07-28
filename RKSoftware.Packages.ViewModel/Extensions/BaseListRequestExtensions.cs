@@ -52,7 +52,7 @@ namespace RKSoftware.Packages.ViewModel.Extensions
         {
             return source
                 .Skip((listRequest.PageNumber - 1) * listRequest.PageSize)
-                .Take(listRequest.PageSize);
+                .Take(listRequest.PageSize + 1);
         }
 
         /// <summary>
