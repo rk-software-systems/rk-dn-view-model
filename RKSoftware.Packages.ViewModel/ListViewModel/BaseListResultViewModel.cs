@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace RKSoftware.Packages.ViewModel
 {
@@ -10,7 +11,7 @@ namespace RKSoftware.Packages.ViewModel
     public class BaseListResultViewModel<T>
         where T : class
     {
-        private bool next;
+        public bool NextPage { get; private set; }
 
         /// <summary>
         /// List item data
@@ -26,7 +27,7 @@ namespace RKSoftware.Packages.ViewModel
         /// Page size
         /// </summary>
         public int PageSize { get; set; }
-        
+
         /// <summary>
         /// Previous page
         /// </summary>
@@ -37,7 +38,16 @@ namespace RKSoftware.Packages.ViewModel
         /// </summary>
         public string Next { get; set; }
 
-        public bool SetNext(bool flag) => next = flag;
+        public void CheckAndSetNext()
+        {
+            if (Data.Count > PageSize)
+            {
+                NextPage = true;
+                Data = Data
+                    .Take(PageSize)
+                    .ToList();
+            }
+        }
 
         /// <summary>
         /// Set Reference to link
@@ -72,7 +82,7 @@ namespace RKSoftware.Packages.ViewModel
 
             var link = path + queryString;
 
-            if (next)
+            if (NextPage)
             {
                 Next = link.Replace($"{nameof(requestModel.PageNumber)}={PageNumber}",
                     $"{nameof(requestModel.PageNumber)}={PageNumber + 1}");
@@ -85,5 +95,5 @@ namespace RKSoftware.Packages.ViewModel
             }
         }
     }
-    
+
 }
