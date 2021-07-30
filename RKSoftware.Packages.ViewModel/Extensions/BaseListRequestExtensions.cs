@@ -50,9 +50,11 @@ namespace RKSoftware.Packages.ViewModel.Extensions
         public static IQueryable<T> ApplyPaginations<T>(this IQueryable<T> source,
             BaseListRequestViewModel listRequest)
         {
+            var pageSize = listRequest.PageSize == int.MaxValue ? int.MaxValue : listRequest.PageSize + 1;
+
             return source
                 .Skip((listRequest.PageNumber - 1) * listRequest.PageSize)
-                .Take(listRequest.PageSize + 1);
+                .Take(pageSize);
         }
 
         /// <summary>

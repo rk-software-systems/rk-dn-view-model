@@ -8,7 +8,7 @@
         /// <summary>
         /// Page Number
         /// </summary>
-        public int PageNumber { get; init; } = 1;
+        public int PageNumber { get; set; } = 1;
 
         /// <summary>
         /// Page size
