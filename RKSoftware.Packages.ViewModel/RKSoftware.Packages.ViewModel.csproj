@@ -17,6 +17,12 @@
     <Version>1.0.5</Version>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <AnalysisLevel>latest</AnalysisLevel>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Include="..\company-logo.png">
       <Pack>True</Pack>

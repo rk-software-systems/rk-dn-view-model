@@ -360,9 +360,3 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-
-.editorconfig
-/DigiCare.UserService/appsettings.Development.json
-/DigiCare.Identity.sln.DotSettings
-/DigiCare.IdentityServer
-/DigiCare.UserService.API/appsettings.development.json

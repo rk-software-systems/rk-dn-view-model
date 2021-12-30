@@ -85,13 +85,13 @@ namespace RKSoftware.Packages.ViewModel
             if (NextPage)
             {
                 Next = link.Replace($"{nameof(requestModel.PageNumber)}={PageNumber}",
-                    $"{nameof(requestModel.PageNumber)}={PageNumber + 1}");
+                    $"{nameof(requestModel.PageNumber)}={PageNumber + 1}", StringComparison.OrdinalIgnoreCase);
             }
 
             if (PageNumber != 1)
             {
                 Prev = link.Replace($"{nameof(requestModel.PageNumber)}={PageNumber}",
-                    $"{nameof(requestModel.PageNumber)}={PageNumber - 1}");
+                    $"{nameof(requestModel.PageNumber)}={PageNumber - 1}", StringComparison.OrdinalIgnoreCase);
             }
         }
     }
