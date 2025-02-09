@@ -26,6 +26,8 @@
     <AssemblyVersion>8.0.1.0</AssemblyVersion>
     <FileVersion>8.0.1.0</FileVersion>
     <Version>8.0.1</Version>
+    <PackageLicenseExpression>MIT OR Apache-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup> 
 
   <ItemGroup>
