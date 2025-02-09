@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    types: [closed]
-    branches:
-      - main
 
 jobs:
   build:
@@ -27,4 +23,4 @@ jobs:
         run: dotnet build RKSoftware.Packages.ViewModel --configuration Release --no-restore -warnaserror
 
       - name: Push to NuGet repository
-        run: dotnet nuget push ./RKSoftware.Packages.ViewModel/bin/Release/*.nupkg --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push ./RKSoftware.Packages.ViewModel/bin/Release/*.nupkg --skip-duplicate --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
