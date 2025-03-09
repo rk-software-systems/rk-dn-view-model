@@ -4,6 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RootNamespace>RKSoftware.Packages.ViewModel</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>8.0.3.0</AssemblyVersion>
+    <FileVersion>8.0.3.0</FileVersion>
+    <Version>8.0.3</Version>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -12,9 +17,7 @@
     <AnalysisLevel>latest</AnalysisLevel>
   </PropertyGroup>
   
-  <PropertyGroup>   
-    <RootNamespace>RKSoftware.Packages.ViewModel</RootNamespace>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  <PropertyGroup>
     <Company>RK Software Systems</Company>
     <Product>Base view models.</Product>
     <Description>This package contains base View model classes as well as extension methods that can be used across web projects</Description>
@@ -22,10 +25,7 @@
     <PackageIcon>company-logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/rk-software-systems/rk-dn-view-model</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>RKSoftware, Web, View Model</PackageTags>
-    <AssemblyVersion>8.0.3.0</AssemblyVersion>
-    <FileVersion>8.0.3.0</FileVersion>
-    <Version>8.0.3</Version>
+    <PackageTags>RKSoftware, Web, View Model</PackageTags>    
     <PackageLicenseExpression>MIT OR Apache-2.0</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup> 
